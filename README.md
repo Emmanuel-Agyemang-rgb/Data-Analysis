@@ -1,6 +1,6 @@
-# [Emmanuel Agyemang]'s Data Analysis Portfolio
+# Emmanuel Agyemang's Data Analysis Portfolio
 
-## 👋 Welcome! I'm [Emmanuel Agyemang], an aspiring internee. This portfolio showcases my projects.
+## 👋 Welcome! I'm Emmanuel Agyemang, an aspiring internee. This portfolio showcases my projects.
 
 ---
 
