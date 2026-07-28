@@ -1,6 +1,6 @@
-# [Your Name]'s Data Analysis Portfolio
+# [Emmanuel Agyemang]'s Data Analysis Portfolio
 
-## 👋 Welcome! I'm [Your Name], an aspiring Data Analyst. This portfolio showcases my projects.
+## 👋 Welcome! I'm [Emmanuel Agyemang], an aspiring internee. This portfolio showcases my projects.
 
 ---
 
@@ -32,6 +32,6 @@ One-sentence description goes here.
 
 ---
 
-# 📌 Project: [Placeholder Project 2 Title]
+
 
 (repeat the same block)
