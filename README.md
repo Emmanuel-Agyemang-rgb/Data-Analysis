@@ -10,8 +10,8 @@ A retail bank was losing roughly 1 in 5 customers a year, and nobody could say e
 
 10,000 bank customers with demographics (age, gender, geography), account details (balance, tenure, products held, credit card status) and a churn flag. Sourced from two linked tables:
 
-- `Customer_Info` — 10,001 rows, mixed geography spellings (`France` / `FRA` / `French`)
-- `Account_Info` — 10,002 rows, balances stored as text (`€159660.8`), one duplicate `CustomerId`
+- Customer_Info — 10,001 rows, mixed geography spellings (France / FRA/ French)
+- Account_Info — 10,002 rows, balances stored as text (€159660.8), one duplicate CustomerId
 
 ## Tools Used
 
