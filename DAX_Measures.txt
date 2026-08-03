@@ -1,0 +1,46 @@
+POWER BI DATA MODEL — NOTES
+============================
+Source: Data/Churn_Master_Cleaned.csv (output of SQL/01_data_cleaning.sql)
+Load this file via Get Data > Text/CSV, or point Power BI straight at the
+vw_ChurnDashboard SQL view for a live connection.
+
+Core DAX measures used across both report pages:
+
+Total Customers =
+COUNTROWS ( Churn_Master )
+
+Churned Customers =
+SUM ( Churn_Master[Exited] )
+
+Churn Rate % =
+DIVIDE ( [Churned Customers], [Total Customers], 0 )
+
+Retained Customers =
+[Total Customers] - [Churned Customers]
+
+Avg Balance (Churned) =
+CALCULATE ( AVERAGE ( Churn_Master[Balance] ), Churn_Master[Exited] = 1 )
+
+Avg Balance (Retained) =
+CALCULATE ( AVERAGE ( Churn_Master[Balance] ), Churn_Master[Exited] = 0 )
+
+High Risk Flag =
+IF (
+    Churn_Master[Exited] = 0
+        && (
+            Churn_Master[NumOfProducts] = 1
+            || Churn_Master[IsActiveMember] = 0
+            || ( Churn_Master[AgeGroup] = "51-60" && Churn_Master[Balance] > 0 )
+        ),
+    1, 0
+)
+
+High Risk Customers =
+SUM ( Churn_Master[High Risk Flag] )
+
+Report pages built on this model:
+  1) Executive Overview   -> KPI cards, churn by geography, active/inactive,
+                              gender, and number of products
+  2) Churn Deep-Dive       -> churn by age band, balance comparison,
+                              zero-balance vs funded, credit card ownership,
+                              and churn trend by tenure
